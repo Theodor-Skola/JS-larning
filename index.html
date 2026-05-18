@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="se">
+<head>
+<meta charset="UTF-8">
+
+<link rel="stylesheet" href="mall.css">
+
+<title>Lärning JS</title>
+</head>
+<body>
+
+<div class="länkar">
+	<a class="apiLänk" href="api.html">API</a>
+	<a class="miniproj" href="miniproj.html">MINI Projekt</a>
+</div>
+
+
+<div class="kalkDisplay">
+	<p class="display">Display</p>
+</div>
+
+<div class="kalk">
+	<div class="kalkNummer">
+		<button class="kalkKnapp" onclick="add('1')" type="button">1</button>
+		<button class="kalkKnapp" onclick="add('2')" type="button">2</button>
+		<button class="kalkKnapp" onclick="add('3')" type="button">3</button>
+		<button class="kalkKnapp" onclick="add('4')" type="button">4</button>
+		<button class="kalkKnapp" onclick="add('5')" type="button">5</button>
+		<button class="kalkKnapp" onclick="add('6')" type="button">6</button>
+		<button class="kalkKnapp" onclick="add('7')" type="button">7</button>
+		<button class="kalkKnapp" onclick="add('8')" type="button">8</button>
+		<button class="kalkKnapp" onclick="add('9')" type="button">9</button>
+		<button class="kalkKnapp" onclick="add('0')" type="button">0</button>
+	</div>
+	
+	<div class="kalkNummer">
+		<button class="kalkKnapp" onclick="addUt('+')" type="button">+</button>
+		<button class="kalkKnapp" onclick="addUt('-')" type="button">-</button>
+		<button class="kalkKnapp" onclick="addUt('/')" type="button">/</button>
+		<button class="kalkKnapp" onclick="addUt('*')" type="button">*</button>
+	</div>
+	
+	<div class = kalkSvar>
+		<button class="kalkKnapp" onclick="räkna()">=</button>
+		<p class="svar">Svaret är här</p>
+	</div>	
+</div>
+
+
+<button class="bytaFärgKnapp" onclick="ändFärg()">Ändra färg</button>
+
+<script src="script.js"></script>
+
+</body>
+</html>

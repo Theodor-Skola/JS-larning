@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="se">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet" />
+	<link rel="stylesheet" href="mall.css">
+
+<title>Målhanteraren</title>
+</head>
+<body>
+
+<header>
+	<div class="länkar">
+		<a class="lärningLänk" href="index.html">Lärning</a>
+		<a class="apiLänk" href="api.html">API</a>
+	</div>
+	<h1>Målhanteraren</h1>
+	<p>Skapa mål och delmål i hur många nivåer du vill.</p>
+</header>
+
+<!-- Total progression -->
+<div id="overall-wrap">
+	<div class="label-row">
+		<span class="lbl">Total framsteg</span>
+		<span id="overall-pct">0%</span>
+	</div>
+	<div class="bar-track">
+		<div class="bar-fill" id="overall-bar" style="background:var(--c0);"></div>
+	</div>
+</div>
+
+<button id="add-goal-btn">+ Lägg till huvudmål</button>
+
+<div id="goals-list">
+	<p id="empty-state">Inga mål ännu. Tryck på knappen ovan för att börja!</p>
+</div>
+
+
+<script src="miniproj.js"></script>
+
+</body>
+</html>
