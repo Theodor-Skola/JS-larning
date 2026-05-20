@@ -126,6 +126,34 @@ header p {
 	transform: scale(0.97); 
 }
 
+.save-functionality-button {
+	display: block;
+    margin: 0 auto 24px;
+    background: var(--c0);
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    padding: 10px 24px;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.93rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.1s;
+}
+
+.save-functionality-button:hover {
+	background: #b35a2c; 
+}
+
+.save-functionality-button:active {
+	transform: scale(0.97); 
+}
+
+.save-functionality {
+	display: flex;
+	flex-direction: row;
+}
+
 #goals-list {
 	max-width: 720px;
     margin: 0 auto;
