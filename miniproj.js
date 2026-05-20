@@ -56,7 +56,7 @@ function removeById(list, id) {
     return false;
 }
 
-// Skapar HTML koden för varje node. Beroende på vilken depth kan den gå igenom alla nodes
+// Skapar HTML koden för varje node. Beroende på depth ändras värden som kopplas ihop med CSS
 function buildNodeEl(node, depth) {
 	// Hittar depthen för att bestäma färgen
     const d = Math.min(depth, MAX_VISUAL_DEPTH); 
@@ -210,5 +210,41 @@ document.getElementById('add-goal-btn').addEventListener('click', () => {
 		}
     }, 30);
 });
+
+// Sparar all data för nuvarande målhanteraren
+document.getElementById('save-button').addEventListener('click', () => {
+	if (roots.length > 0) {
+		let rootString = JSON.stringify(roots, null, 2);
+		
+		localStorage.setItem("root", rootString);
+		localStorage.setItem("nextID", nextId);
+	}
+});
+
+document.getElementById('reset-button').addEventListener('click', () => {
+	localStorage.setItem("root", []);
+	localStorage.setItem("nextID", 1);
+	roots = [];
+	nextId = 1;
+	render();
+});
+
+function onLoadFunctions() {
+	let rootTemp = localStorage.getItem("root");
+	rootTemp = JSON.parse(rootTemp);
+	let nextIdTemp = localStorage.getItem("nextID");
+	console.log(rootTemp);
+	
+	if (rootTemp == []) {
+		
+	} else {
+		if (rootTemp.length > 0) {
+			roots = rootTemp
+			nextId = nextIdTemp
+			render();
+		}
+	}
+}
+window.onload = onLoadFunctions;
 
 render();
